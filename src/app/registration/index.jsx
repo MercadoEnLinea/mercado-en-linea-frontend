@@ -40,7 +40,7 @@ export default function Registration() {
 
                 <div class="flex items-center justify-end mt-4">
                     <Button>
-                        Register
+                        Registrarse
                     </Button>
                 </div>
 

@@ -1,5 +1,7 @@
+import React from "react";
 import { useLottie } from "lottie-react";
 import groovyWalkAnimation from "../common/assets/logo.json";
+import logo from "../common/assets/shop.png";
  
 const Logo = () => {
     const style = {
@@ -12,9 +14,11 @@ const Logo = () => {
 
   };
  
-  const { View } = useLottie(options, style);
+//   const { View } = useLottie(options, style);
  
-  return View;
+  return (
+      <img src={logo} style={{ height: '128px'}}/>
+  );
 };
  
 export default Logo;
