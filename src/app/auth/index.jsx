@@ -16,13 +16,10 @@ export default function Auth() {
           <Input id="name" type="email" placeholder="E-mail" className="mt-1 block w-full" required autoFocus autoComplete="email" />
         </div>
 
-
         <div className="mt-4">
           <Label htmlFor="name" value="Contraseña" />
           <Input id="name" type="password" placeholder="Contraseña" className="mt-1 block w-full" required autoFocus autoComplete="password" />
         </div>
-
-
 
         <div class="flex items-center justify-end mt-4">
           <Button>
