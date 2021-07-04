@@ -21,7 +21,7 @@ export default function Auth() {
           <Input id="name" type="password" placeholder="Contraseña" className="mt-1 block w-full" required autoFocus autoComplete="password" />
         </div>
 
-        <div class="flex items-center justify-end mt-4">
+        <div className="flex items-center justify-end mt-4">
           <Button>
             Ingresar
           </Button>
