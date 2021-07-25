@@ -10,7 +10,7 @@ export default function Logo({ ...props }) {
                     src={logo}
                     alt="Workflow"
                 />
-                <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl ml-4" href="#">
+                <a className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl ml-4" href="#">
                     Mercado en línea
                 </a>
             </div>

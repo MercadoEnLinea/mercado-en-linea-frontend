@@ -66,7 +66,7 @@ function classNames(...classes) {
 
 export default function Navbar({ ...props }) {
     return (
-        <Disclosure as="header" className="bg-white shadow">
+        <Disclosure as="nav">
             {({ open }) => (
                 <React.Fragment>
                     <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:divide-y lg:divide-gray-200 lg:px-8">
