@@ -1,6 +1,6 @@
-import React, { useRef } from 'react'
+import React, {useRef } from 'react'
 import cn from 'classnames'
-import s from '@components/ui/Input/styles.module.css'
+import s from './styles.module.css'
 
 export default function Input({className, children, onChange,     Component = 'label', ...rest}) {
   console.log('Input', this, className, children, onChange, Component)
@@ -17,16 +17,17 @@ export default function Input({className, children, onChange,     Component = 'l
 
   return (
 
-    <input
-      className={rootClassName}
-      onChange={handleOnChange}
-      autoComplete="off"
-      autoCorrect="off"
-      autoCapitalize="off"
-      spellCheck="false"
-      {...rest}
-    />
+      <input
+        className={rootClassName}
+        onChange={handleOnChange}
+        autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="off"
+        spellCheck="false"
+        {...rest}
+      />
 
   )
 }
+
 
