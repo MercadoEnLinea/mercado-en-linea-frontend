@@ -3,7 +3,7 @@ import Logo from '@components/ui/Logo'
 
 const Card = ({ children, ...props }) => {
   return (
-    <div className="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+    <div className="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-auto bg-no-repeat bg-center" style={{backgroundImage: "url(https://images.unsplash.com/photo-1588912422476-f2afaed1ec0c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2098&q=80)"}}>
       <div>
       </div>
 

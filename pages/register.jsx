@@ -1,14 +1,14 @@
 import React from 'react'
 
 import Card from '@components/ui/Card'
-import LoginView from '@components/auth/LoginView'
+import SignUpView from '@components/auth/SignUpView'
 
 
 export default function Auth() {
   return (
     <div>
       <Card>
-        <LoginView />
+        <SignUpView />
       </Card>
     </div>
   )

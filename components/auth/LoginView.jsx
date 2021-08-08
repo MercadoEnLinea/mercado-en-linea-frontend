@@ -1,10 +1,7 @@
 import {useEffect, useState, useCallback } from 'react'
-import { Button, Input as I } from '@components/ui'
-import Label from 'src/app/common/Label'
-import Logo from 'src/app/common/Logo'
-import Input from 'src/app/common/Input'
+import { Button, Input, Logo } from '@components/ui'
 
-console.log(Input, I, Button, Logo, Label)
+console.log(Input, Button, Logo)
 
 import { validate } from 'email-validator'
 
@@ -78,8 +75,8 @@ const LoginView = () => {
             </a>
           </div>
         )}
-        <Input type="email" placeholder="Email" onChange={() => {}} />
-        <Input type="password" placeholder="Password" onChange={() => {}} />
+        <Input type="email" placeholder="Correo Electrónico" onChange={() => {}} />
+        <Input type="password" placeholder="Contraseña" onChange={() => {}} />
 
         <Button
           variant="slim"
@@ -88,16 +85,16 @@ const LoginView = () => {
           loading={loading}
           disabled={disabled}
         >
-          Log In
+          Ingresar
         </Button>
         <div className="pt-1 text-center text-sm">
-          <span className="text-accent-7">Don't have an account?</span>
+          <span className="text-accent-7">¿Aún no tienes cuenta?</span>
           {` `}
           <a
             className="text-accent-9 font-bold hover:underline cursor-pointer"
             onClick={() => setModalView('SIGNUP_VIEW')}
           >
-            Sign Up
+            Registrarse
           </a>
         </div>
       </div>
