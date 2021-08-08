@@ -61,7 +61,7 @@ const LoginView = () => {
   return (
     <form
       onSubmit={handleLogin}
-      className="w-80 flex flex-col justify-between p-3"
+      className="w-100 flex flex-col justify-between p-3"
     >
       <div className="flex justify-center pb-12 ">
         <Logo width="64px" height="64px" />
@@ -84,6 +84,7 @@ const LoginView = () => {
         <Button
           variant="slim"
           type="submit"
+          className={'button customerEmail-button button--primary optimizedCheckout-buttonPrimary'}
           loading={loading}
           disabled={disabled}
         >

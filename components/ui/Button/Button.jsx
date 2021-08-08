@@ -10,7 +10,6 @@ const Button = forwardRef((props, buttonRef) => {
     variant = '',
     children,
     Component = 'button',
-    width = 10,
     loading = false,
     disabled = false,
     style = {},
@@ -37,7 +36,6 @@ const Button = forwardRef((props, buttonRef) => {
       className={rootClassName}
       disabled={disabled}
       style={{
-        width,
         ...style,
       }}
       {...rest}
