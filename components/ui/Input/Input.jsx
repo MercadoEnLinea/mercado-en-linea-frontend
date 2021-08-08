@@ -1,9 +1,10 @@
-import { React } from 'react'
+import React, {useRef } from 'react'
 import cn from 'classnames'
 import s from './styles.module.css'
 
-const Input = (props) => {
-  const {className, children, onChange, ...rest} = props
+export default function Input({className, children, onChange,     Component = 'label', ...rest}) {
+  console.log('Input', this, className, children, onChange, Component)
+  const ref = useRef()
 
   const rootClassName = cn(s.root, {}, className)
 
@@ -15,7 +16,7 @@ const Input = (props) => {
   }
 
   return (
-    <label>
+
       <input
         className={rootClassName}
         onChange={handleOnChange}
@@ -25,8 +26,8 @@ const Input = (props) => {
         spellCheck="false"
         {...rest}
       />
-    </label>
+
   )
 }
 
-export default Input
+

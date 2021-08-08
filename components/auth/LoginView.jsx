@@ -1,5 +1,10 @@
-import {useEffect, useState, useCallback, React } from 'react'
-import { Button, Logo, Input } from 'components/ui'
+import {useEffect, useState, useCallback } from 'react'
+import { Button, Input as I } from '@components/ui'
+import Label from 'src/app/common/Label'
+import Logo from 'src/app/common/Logo'
+import Input from 'src/app/common/Input'
+
+console.log(Input, I, Button, Logo, Label)
 
 import { validate } from 'email-validator'
 
@@ -73,8 +78,8 @@ const LoginView = () => {
             </a>
           </div>
         )}
-        <Input type="email" placeholder="Email" onChange={setEmail} />
-        <Input type="password" placeholder="Password" onChange={setPassword} />
+        <Input type="email" placeholder="Email" onChange={() => {}} />
+        <Input type="password" placeholder="Password" onChange={() => {}} />
 
         <Button
           variant="slim"
@@ -99,3 +104,5 @@ const LoginView = () => {
   )
 
 }
+
+export default LoginView

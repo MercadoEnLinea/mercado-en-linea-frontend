@@ -1,15 +1,15 @@
 import cn from 'classnames'
-import { forwardRef, useRef, React } from 'react'
+import { forwardRef, useRef } from 'react'
 import s from './styles.module.css'
 import mergeRefs from 'react-merge-refs'
-import Loading from 'components/ui/Loading'
+import Loading from '@components/ui/Loading'
 
 const Button = forwardRef((props, buttonRef) => {
   const {
     className = '',
     variant = '',
     children,
-    Component = null,
+    Component = 'button',
     width = 10,
     loading = false,
     disabled = false,

@@ -1,5 +1,32 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import cn from 'classnames'
+import s from '@components/ui/Input/styles.module.css'
 
-export default function Input({ ...props }) {
-    return (<input {...props} className={"appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm " + props.className}  />)
+export default function Input({className, children, onChange,     Component = 'label', ...rest}) {
+  console.log('Input', this, className, children, onChange, Component)
+  const ref = useRef()
+
+  const rootClassName = cn(s.root, {}, className)
+
+  const handleOnChange = (e) => {
+    if (onChange) {
+      onChange(e.target.value)
+    }
+    return null
+  }
+
+  return (
+
+    <input
+      className={rootClassName}
+      onChange={handleOnChange}
+      autoComplete="off"
+      autoCorrect="off"
+      autoCapitalize="off"
+      spellCheck="false"
+      {...rest}
+    />
+
+  )
 }
+

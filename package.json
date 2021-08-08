@@ -9,11 +9,10 @@
     "@heroicons/react": "^1.0.1",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
     "classnames": "latest",
     "email-validator": "^2.0.4",
+    "husky": "^6.0.0",
+    "keen-slider": "^5.5.1",
     "lottie-react": "^2.1.0",
     "next": "latest",
     "react": "latest",
@@ -24,7 +23,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3031",
     "build": "next build",
     "start": "next start",
     "test": "craco test",
@@ -47,10 +46,60 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.3.1",
     "eslint": "^7.32.0",
-    "eslint-config-react-app": "latest",
-    "postcss": "^7.0.36",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
+    "eslint-config-next": "^11.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "postcss": "^8.3.6",
+    "prettier": "^2.3.0",
+    "tailwindcss": "^2.2.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx}": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.{md,mdx,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "next-unused": {
+    "alias": {
+      "@lib/*": [
+        "lib/*"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ]
+    },
+    "debug": true,
+    "include": [
+      "components",
+      "lib",
+      "pages"
+    ],
+    "exclude": [],
+    "entrypoints": [
+      "pages"
+    ]
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }
